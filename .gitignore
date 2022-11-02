@@ -1,3 +1,6 @@
+# Downloaded libraries
+src/lib/gcc-arm-none-eabi-6_2-2016q4*
+
 # Object files
 *.o
 *.ko

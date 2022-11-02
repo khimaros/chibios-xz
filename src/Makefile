@@ -223,7 +223,7 @@ INCDIR = $(CHIBIOS)/os/license \
 MCU  = cortex-m4
 
 #TRGT = arm-elf-
-#TRGT = arm-none-eabi-  # woo ARM native
+TRGT = arm-none-eabi-
 CC   = $(TRGT)gcc
 CPPC = $(TRGT)g++
 # Enable loading with g++ only if you need C++ runtime support.
@@ -273,7 +273,8 @@ UINCDIR =
 ULIBDIR =
 
 # List all user libraries here
-ULIBS = lib/libm.a lib/armv7e-m-fpu-libgcc.a lib/libc-nano-armv7e-m-fpu.a 
+ULIBS = lib/gcc-arm-none-eabi-6_2-2016q4/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a lib/gcc-arm-none-eabi-6_2-2016q4/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a lib/gcc-arm-none-eabi-6_2-2016q4/lib/gcc/arm-none-eabi/6.2.1/hard/libgcc.a
+#ULIBS = lib/libm.a lib/armv7e-m-fpu-libgcc.a lib/libc-nano-armv7e-m-fpu.a 
 #ULIBS = lib/libm.a lib/libc_nano.a lib/libg_nano.a lib/libgcc.a 
 
 #

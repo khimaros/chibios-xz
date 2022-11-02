@@ -9,16 +9,21 @@ Main differences from 2017 to 2020 badge:
 * Goth color scheme
 * "2020" decal on back
 
+## Hardware
+
+Schematics: http://bunniefoo.com/bunnie/phage-2017-evt1.pdf
+
+Case design: http://bunniefoo.com/bunnie/bm2017-assembly.step
+
 ## Getting Started
 
-We assume you are building on a Raspberry Pi (so ARM-native) device,
-and using gcc6. 
+We assume you are building on Debian Bookworm (`x86_64`)
 
-1. Check out https://github.com/bunnie/chibios-xz (git checkout https://github.com/bunnie/chibios-xz chibios-bm20)
-2. Check out the bm20 branch (cd chibios-bm20; git checkout bm20)
-3. Change to the "src" dir
-4. Run "make -j3".  If you're cross-compiling it, add " TRGT=arm-none-eabi-" to the command.
-5. If you get a complaint about stubs-soft.h, create an empty file of that name in the directory where the error message is pointing to and the error will go away.
+1. Checkout this repository.
+1. Checkout submodules `git submodule update --recursive --init`
+1. Follow instructions in `src/lib/README.txt`
+1. Change to the `src` dir
+1. Run `make -j3`
 
 The build result will be "build/bm20.elf", an object file that can be
 loaded using openOCD into the badge.
